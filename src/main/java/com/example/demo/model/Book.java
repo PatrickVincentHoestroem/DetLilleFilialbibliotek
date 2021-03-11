@@ -37,4 +37,16 @@ public class Book {
     public int getTextSize() {
         return textSize;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", author='" + author + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", pageSize='" + pageSize + '\'' +
+                ", pageAmount=" + pageAmount +
+                ", textSize=" + textSize +
+                '}';
+    }
 }
