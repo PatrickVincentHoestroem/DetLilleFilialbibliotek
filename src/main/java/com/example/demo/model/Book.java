@@ -1,11 +1,11 @@
 package com.example.demo.model;
 
-public class book {
+public class Book {
 
     private String name, author, isbn, pageSize;
     private int pageAmount, textSize;
 
-    public book(String name, String author, String isbn, String pageSize, int pageAmount, int textSize) {
+    public Book(String name, String author, String isbn, String pageSize, int pageAmount, int textSize) {
         this.name = name;
         this.author = author;
         this.isbn = isbn;
