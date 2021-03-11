@@ -4,10 +4,10 @@ public class Media {
 
     private String name;
     private String mediaType;
-    private long codeNo;
+    private String codeNo;
     private double size;
 
-    public Media(String name, String mediaType, long codeNo, double size) {
+    public Media(String name, String mediaType, String codeNo, double size) {
         this.name = name;
         this.mediaType = mediaType;
         this.codeNo = codeNo;
@@ -30,11 +30,11 @@ public class Media {
         this.mediaType = mediaType;
     }
 
-    public long getCodeNo() {
+    public String getCodeNo() {
         return codeNo;
     }
 
-    public void setCodeNo(long codeNo) {
+    public void setCodeNo(String codeNo) {
         this.codeNo = codeNo;
     }
 

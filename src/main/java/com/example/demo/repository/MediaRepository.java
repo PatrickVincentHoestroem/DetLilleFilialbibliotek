@@ -22,12 +22,16 @@ public class MediaRepository {
         return null;
     }
 
-    public Media getBookByIsbn(String codeNo) {
+    public Media getMediaByCodeNo(String codeNo) {
         for (Media m:list) {
-            if (m.getcodeNo().equals(codeNo)) {
+            if (m.getCodeNo().equals(codeNo)) {
                 return m;
             }
         }
         return null;
+    }
+
+    public void add(Media media) {
+        list.add(media);
     }
 }
