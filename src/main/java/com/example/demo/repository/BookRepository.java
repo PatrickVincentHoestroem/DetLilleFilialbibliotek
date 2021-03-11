@@ -27,4 +27,8 @@ public class BookRepository {
         }
         return null;
     }
+
+    public void add(Book book){
+        list.add(book);
+    }
 }

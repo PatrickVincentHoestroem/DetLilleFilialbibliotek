@@ -4,5 +4,4 @@ import com.example.demo.repository.BookRepository;
 
 public class BookService {
 
-
 }
