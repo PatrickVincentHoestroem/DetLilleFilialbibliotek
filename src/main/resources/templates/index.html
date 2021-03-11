@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Books</h1>
+<table>
+    <tr>
+        <th>Bog</th>
+        <th>Forfatter</th>
+        <th>Antal sider</th>
+        <td>isbn</td>
+    </tr>
+    <tr th:each="book : ${books}">
+        <td th:text="${book.name}"></td>
+        <td th:text="${book.author}"></td>
+        <td th:text="${book.pageAmount}"></td>
+        <td th:text="${book.isbn}"></td>
+        <td>
+            <a th:href="@{'/loan/' + ${book.isbn}}">
+                <button class="button">Loan</button>
+            </a>
+            <a th:href="@{'/return/' + ${book.isbn}}">
+                <button class="button">Return</button>
+            </a>
+        </td>
+    </tr>
+</table>
+
+<h1>Media</h1>
+<table>
+    <tr>
+        <th>Medie navn</th>
+        <th>Type</th>
+        <th></th>
+        <td></td>
+    </tr>
+    <tr th:each="media : ${medias}">
+        <td th:text="${media.name}"></td>
+        <td th:text="${media.mediaType}"></td>
+        <td th:text="${media.codeNo}"></td>
+        <td th:text="${media.size}"></td>
+        <td>
+            <a th:href="@{'/loan/' + ${media.codeNo}}">
+                <button class="button">Loan</button>
+            </a>
+            <a th:href="@{'/return/' + ${media.codeNo}}">
+                <button class="button">Return</button>
+            </a>
+        </td>
+    </tr>
+</table>
+
+
+</body>
+</html>
